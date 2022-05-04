@@ -7,6 +7,8 @@
     
     <title>Minjung and Anthony</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <!-- <link href="./css/float-grid.css" rel="stylesheet" type="text/css" /> -->
     <link href="./css/index.css" rel="stylesheet" type="text/css" />
@@ -14,62 +16,148 @@
   <body>
     <!-- <header role='banner' id='js-image' class='banner bg'> -->
     <header role='banner' id='js-image'>
-      <div id='js-landing' class='intro'>
-        <img id='js-main-img' class='main_img' src="./img/main copy.jpg">
+      <div id='js-landing' class=''>
+        <img id='js-main-img1' class='intro fi' src="./img/main1.jpg">
+        <img id='js-main-img2' class='intro fi' src="./img/main2.jpg">
+        <img id='js-main-img3' class='intro fi' src="./img/main3.jpg">
+        <img id='js-main-img4' class='intro fi' src="./img/main4.jpg">
+        <img id='js-main-img5' class='intro fi' src="./img/main5.jpg">
+        <img id='js-main-img6' class='intro fi' src="./img/main6.jpg">
+      </div>
+      <div id='js-landing-bot' class='intro-bot'>
+        <img id='js-main-img-next' class='main_img2 fi' src="./img/main_next.jpg">
       </div>
     </header>
-
+    <div id='js-page-loader' class="page_loader">
+      <center>
+        <img id='js-loader-img' src="./img/loading-1.gif">
+        <BR><BR>
+        Loading...
+      </center>
+    </div>
     <main role='main'>
-      <div id='js-greeting' class='greeting banner fi'>
-        <br>
-        <section class="font_m inline_center">Minjung & Anthony</section>
-      </div>
       <div id='js-bottom' class='main_bg'>
+        <div id='js-btn-mute'  onclick="stopMusic()" class="fi_short main_flex mute_icon hidden" style="background-color:transparent !important;">
+          <span class="fa-stack"  onclick="stopMusic()" class="" style="cursor:pointer;">
+            <i class="fa fa-volume-down fa-stack-1x" style="font-size:22px;width:32px;top:0;color:rgb(0,0,0,0.3);"></i>
+            <i class="fa fa-ban fa-stack-2x text-danger" style="color:rgb(255,0,0,0.3);font-size:30px;"></i>
+          </span>
+        </div>
+        <!-- <div id='js-btn-mute' class="main_flex mute_icon hidden">
+          <button type="submit" onclick="stopMusic()" class="btn_black fi">
+            <i class="fa fa-stop-circle-o" style="font-size:22px;"></i><section class='btn_ft btn_scroll'>&nbsp Stop Music</section>  
+          </button>
+        </div> -->
         <div>
           <audio
-            controls loop hidden
+            controls hidden
             src="./img/situ.mp3">
             Your browser does not support the audio element.
           </audio>
-        </div>        
-        <div id='js-btn-more' class="main_flex">
-          <button type="submit" onclick="playMusic()" class="btn_black fi">More Pictures</button>
-        </div>    
-          <div id='js-loader' class="loader">
+        </div>
+        <div id='js-greeting' class='greeting fi_short'>
+          <br>
+          <section id='js-name' class="font_m letter_wide inline_center no_margin">ANTHONY & MINJUNG</section>
           <center>
-            <img src="./img/loading-6.gif">
+            <img id='js-wedding' class='wedding_logo fi' src="./img/wedding.png">
+          </center>
+          <div id='js-btn-more' class="main_flex">
+            <button type="submit" onclick="playMusic()" class="btn_black fi_short more_pic">
+              <i class="fa fa-film" style="font-size:24px;"></i><section class='btn_ft btn_scroll'>&nbsp; &lt;&lt; Photos</section>
+            </button>
+          </div> 
+           
+          <div id='js-warning' class='main_flex w300 red fi_short'>
+            <BR>
+            * Please beware of music<BR><BR><BR><BR>
+          </div>    
+          <div id="js-msg-bottom" class="hidden">
+            <div id='js-date' class='main_flex w300 fi_short'>
+              APRIL &nbsp; | &nbsp; 20 &nbsp; | &nbsp; 2022<BR><BR>
+            </div>
+
+            <div class='main_flex w300 fi_short'>
+              <!-- <i class="fa fa-solid fa-cog fa-spin" style="color:#2a2c2d;font-size:24px;margin-top:-4px;"></i> -->
+              PLEASE SCROLL THE SCREEN
+            </div>
+            <BR>
+            <div id='js-date' class='main_flex w300 fi_short'>
+              <i class="fa fa-hand-o-down" style="color:#2a2c2d;font-size: 28px"></i>
+              <!-- APRIL &nbsp; | &nbsp; 20 &nbsp; | &nbsp; 2022 -->
+            </div><BR><BR>  
+          </div>
+        </div>  
+
+        <div id='js-loader' class="loader">
+          <center>
+            <img id='js-loader-img' src="./img/loading-6.gif">
           </center>
         </div>
 
         <!-- <section class='font_m inline_center help' onClick="playMusic()">More Pictures</section> -->
-        <div id='js-more-pic' class='more_pic fi'>
-          <div>
-            <a href='https://www.instagram.com/anthony_philly/'><img id='js-mobile-logo' class='mobile_icon' src='./img/adlogo.png'></a>
-          </div><br><br>
+        <div id='js-more-pic' class='more_pic'>
+          <div class="bgcolor_white">
+            <BR><BR>
+            <div id='js-logo-wrap' style='background-color:#fff;'>
+              <a href='https://www.instagram.com/anthony_philly/'>
+                <img id='js-mobile-logo' class='mobile_icon' src='./img/adlogo.png'>
+              </a>
+            </div><br><br>
+          </div>
+
           <center>
-            <!-- <img class='inline_center img_p' src="./img/2.jpg"><BR> -->
-            <img class='inline_center img_l' src="./img/1.jpg"><BR>
-            <img class='inline_center img_p' src="./img/4.jpg"><BR>
-            <!-- <img class='inline_center img_p' src="./img/3.jpg"><BR> -->
-            <!-- <img class='inline_center img_p' src="./img/5.jpg"><BR> -->
-            <img class='inline_center img_l' src="./img/7.jpg"><BR>
-            <img class='inline_center img_p' src="./img/6.jpg"><BR>
-            <img class='inline_center img_l' src="./img/8.jpg"><BR>
-            <!-- <img class='inline_center img_p' src="./img/10.jpg"><BR> -->
-            <!-- <img class='inline_center img_l' src="./img/12.jpg"><BR> -->
-            <img class='inline_center img_l' src="./img/11.jpg"><BR>
-            <img class='inline_center img_p' src="./img/13.jpg"><BR>
-            <img class='inline_center img_l img_last' src="./img/9_.jpg">
-          </center>
-          <div id='js-btn-mute' class="main_flex">
-            <button type="submit" onclick="stopMusic()" class="btn_black fi">Stop Music</button>
+            <div class="bgcolor_white">
+              <img class='inline_center img_l img_no' src="./img/20.jpg"><BR>
+              <img class='inline_center img_l img_no' src="./img/30.jpg"><BR>
+              <!-- <img class='inline_center img_l img_no no_margin' src="./img/31_.jpg"><BR> -->
+              <img class='inline_center img_l img_no margin_top_neg' src="./img/23.jpg"><BR>
+              <!-- <img class='inline_center img_l img_no margin_top_neg tran' src="./img/24.png"><BR> -->
+              <img class='inline_center img_l img_no no_margin margin_top_neg' src="./img/25.jpg"><BR><BR><BR><BR>
+
+            </div>
+
+            <div class="top_padding_m opacity_bg">
+              <img class='inline_center img_l img_no margin_top_neg bottom_neg trans' src="./img/24.png"><BR>
+                    
+            </div>
+            <div class="bgcolor_white margin_l">
+                <BR><BR>
+                <!-- <img class='inline_center img_l img_no no_margin margin_top_neg' src="./img/25.jpg"><BR><BR><BR><BR> -->
+                <img class='inline_center img_l img_no no_margin' src="./img/26.jpg"><BR><BR><BR>
+                <img class='inline_center img_l img_no' src="./img/28_.jpg"><BR>
+                <img class='inline_center img_l img_no' src="./img/50.jpg"><BR>
+                <img class='inline_center img_l img_no' src="./img/54.jpg"><BR>
+                <img class='inline_center img_l img_no padding_added' src="./img/51.jpg"><BR>
+            </div>
+            <div class="bgcolor_white">
+              <img class='inline_center img_l img_no' src="./img/40.jpg"><BR>
+              <img class='inline_center img_l img_no no_margin' src="./img/41_.jpg">
+              <BR><BR><BR>
+              <img class='inline_center img_l' src="./img/1.jpg"><BR>
+              <img class='inline_center img_l img_no neg_margin' src="./img/8.jpg"><BR><BR><BR>
+              <!-- <img class='inline_center img_p' src="./img/10.jpg"><BR> -->
+              <!-- <img class='inline_center img_l' src="./img/12.jpg"><BR> -->
+              <img class='inline_center img_l' src="./img/11.jpg"><BR>
+              <img class='inline_center img_p' src="./img/13.jpg"><BR> 
+
+              <img class='inline_center img_l img_no no_margin' src="./img/5.jpg"><BR><BR><BR>
+              <img class='inline_center img_l img_no' src="./img/9_.jpg"><BR><BR>
+              <img class='inline_center img_l img_no' src="./img/capemay_list.jpg">
+              <BR>
+                </div>
+            </center>
+
+          <div id='js-btn-mute-2' class="main_flex bgcolor_white">
+            <button type="submit" onclick="stopMusic()" class="btn_black fi">
+              <i class="fa fa-stop-circle-o" style="font-size:22px;"></i><section class='btn_ft btn_scroll'>&nbsp Stop Music</section>  
+            </button>
           </div>                  
     
         </div>
       </div>
     </main>
 
-    <div id='js-copy-right' class='copy_right fi'>© 2022 Anthony Photography</div>
+    <div id='js-copy-right' class='copy_right bgcolor_white fi'>© 2022 Anthony Photography</div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>

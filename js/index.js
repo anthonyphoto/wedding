@@ -1,9 +1,10 @@
 'use strict';
 
 // const PIC_LIST = [$('#js-main-img1'), $('#js-main-img2'), $('#js-main-img3'), $('#js-main-img4'), $('#js-main-img5'), $('#js-main-img6')];
-const PIC_LIST = [1, 2, 3, 4, 5, 6];
+const PIC_LIST = [1, 2, 3];
 let NEXT_PIC = 0;
 let CURRENT_PIC = PIC_LIST.length - 1;
+let STOP = false;
 
 function morePicBanner() {
   $('#js-landing').replaceWith(`
@@ -15,10 +16,17 @@ function morePicBanner() {
 
 function playMusic() {
   window.document.querySelector('audio').play();
+  STOP = true; // stop slide show
   $('#js-btn-more').hide();
   $('#js-warning').hide();
+  $('#js-cover-greeting').hide();
   $('#js-greeting').css('display', 'none');
-  $('.intro').hide();
+//hide
+  // $('.intro').hide();
+  $('#js-main-img1').hide();
+  $('#js-main-img2').hide();
+  $('#js-main-img3').hide();
+
   $('#js-main-img-next').css('display', 'block');
   // $('#js-main-img').attr('src', './img/capemay_bw.jpg');
   $('#js-main-img').addClass('fi_short');
@@ -32,7 +40,8 @@ function playMusic() {
   setTimeout(function () {
     // $('#js-main-img').attr('src', './img/capemay.jpg');
     $('#js-loader').css('display', 'none');
-    $('#js-greeting').addClass('background_2');
+    // $('#js-landing').hide();
+    // $('#js-greeting').addClass('background_2');
     $('#js-greeting').css('display', 'block');
     $('#js-more-pic').css('display', 'block');
     $('#js-btn-mute').css('display', 'flex');
@@ -75,20 +84,15 @@ function renderMainImage() {
   $('#js-bottom').css('margin-top', height*greetingTopFactor*1.05);
   // $('#js-btn-mute').css('margin-top', height*greetingTopFactor*1.05);
   $('.intro').css('height', height * heightFactor);
-  $('#js-main-img-next').css('height', height);
+
+//okim  $('#js-main-img-next').css('height', height * 0.6);
   // $('#js-landing').css('bottom', bottomFactor);
   $('.intro').css('bottom', bottomFactor);
-  
-  if (isLandscape && width > 1600) {
-    $('#js-logo-wrap').addClass('main_flex');
-    // $('#js-mobile-logo').css('margin-left', '10vw');
-    // $('#js-copy-right').css('margin-left', '10vw');
-  }
 
   if (!isLandscape) {
     $('#js-greeting').css('background-position', 'top right');
     $('#js-greeting').css('background-size', '100%');
-    $('#js-mobile-logo').css('width', '180px');
+    $('#js-mobile-logo').css('width', '220px');
     $('.img_p, .img_l').css('padding', '7% 0');
     $('.img_p, .img_l').css('margin-bottom', '11%');
     $('#js-name').css('font-size', '1.4rem');
@@ -110,7 +114,7 @@ function renderMainImage() {
 function handleEvent() {;
   let songTrack = 0;
   const songList = ['./img/song-fallin.m4a', './img/situ.mp3', './img/madeleine.mp3'];
-  // songList.sort(() => Math.random() - 0.5);
+  songList.sort(() => Math.random() - 0.5);
 
   $('audio').attr('src', songList[songTrack++]);
 
@@ -125,9 +129,17 @@ function handleEvent() {;
       window.document.querySelector('audio').play();
     }
   });
+
 }
 
 async function slideShowPlay() { 
+  if (STOP === true) {
+    $('#js-main-img1').hide();
+    $('#js-main-img2').hide();
+    $('#js-main-img3').hide();  
+    return;
+  }
+
   if (NEXT_PIC === 0) $(`#js-main-img${PIC_LIST[CURRENT_PIC]}`).css('z-index', '-2');
   $(`#js-main-img${PIC_LIST[NEXT_PIC]}`).css('display', 'block');
 
@@ -145,7 +157,7 @@ function loader() {
     $('#js-page-loader').css('display', 'none');
     $('.intro').css('display', 'none');
     $('#js-main-img1').css('display', 'block');
-  }, 500);
+  }, 1500);
 }
 
 $(_=> {

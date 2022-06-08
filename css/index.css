@@ -29,6 +29,11 @@ body {
   flex-flow: nowrap !important;
 }
 
+.down_arrow {
+  width: 20px;
+  margin-top: 12px;
+}
+
 .top_logo {
   display: flex;
   justify-content: space-between;
@@ -75,23 +80,31 @@ body {
   background-color: rgb(255, 255, 255, 0.8);
 }
 
+.leaf{
+  opacity: 0.5;
+  width: 220px;
+  height: 60px;
+  margin-top: -24px;
+}
+
 .trans {
   background-color: transparent !important;
 }
 
 .opacity_bg {
-  background-color: rgb(255, 255, 255, 0.2) !important;
+  background-color: rgb(255, 255, 255, 0.5) !important;
 
 }
 .top_padding_m {
-  padding-top: 50px;
+  padding-top: 150px;
 }
 
 .mobile_icon {
-  margin-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
   margin-bottom: -5%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .main_flex {
@@ -259,9 +272,9 @@ body {
   top:0;
   left:0;
   padding-top: 20%;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
+  width: 98%;
+  height: 98%;
+  z-index: 90;
 }
 
 .banner {
@@ -358,7 +371,7 @@ margin-top: 2rem;
 }
 
 .copy_right {
-  border-top: 1px solid #DDDDDD;
+  /* border-top: 1px solid #DDDDDD; */
   text-align: center;
   padding: 5px;
   padding-top: 10vh;
@@ -375,6 +388,17 @@ margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
+
+.wedding_name {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  color: #2b390e;
+  letter-spacing: 0.01rem; 
+  line-height: 2.8rem;;
+  font-weight: 400;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
 
 /* font medium */
 .font_m {
@@ -442,7 +466,8 @@ ul {
 }
 
 .mute_icon {
-  margin-bottom: 16px;
+  margin-bottom: 4px;
+  margin-left: 6%;
   
 }
 
@@ -455,7 +480,7 @@ ul {
 }
 
 .margin_l {
-  margin-bottom: 500px;
+  margin-bottom: 350px;
 }
 
 .padding_added {
@@ -541,7 +566,7 @@ ul {
 }
 
 .warning_mobile {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 a,
@@ -676,3 +701,4 @@ a:focus  {
   outline: none;
   opacity: 0.9;
 }
+

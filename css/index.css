@@ -96,7 +96,7 @@ body {
 
 }
 .top_padding_m {
-  padding-top: 150px;
+  padding-top: 350px;
 }
 
 .mobile_icon {
@@ -162,9 +162,17 @@ body {
   margin-bottom: -5px !important;
   padding-bottom: 0 !important;
 }
-.more_pic {
-  margin-top: 0 !important;
 
+.new_landing {
+  position: fixed;
+  /* background-color: transparent; */
+  background-color: white;
+  top:0;
+  left:0;
+  padding-top:200px;
+  width: 100%;
+  height: 100%;
+  z-index: 80;  
 }
 
 .no_margin {
@@ -209,9 +217,12 @@ body {
 }
 
 .more_pic {
+  margin-top: 0 !important;
   display: none;
-  /* transition: display 1.4s ease 1s; */
+}
 
+.font_detail {
+  font-size: 24px;
 }
 
 .fi_short {
@@ -271,9 +282,9 @@ body {
   background-color: white;
   top:0;
   left:0;
-  padding-top: 20%;
-  width: 98%;
-  height: 98%;
+  padding-top: 250px;
+  width: 100%;
+  height: 100%;
   z-index: 90;
 }
 
@@ -480,7 +491,7 @@ ul {
 }
 
 .margin_l {
-  margin-bottom: 350px;
+  margin-bottom: 450px;
 }
 
 .padding_added {

@@ -30,9 +30,9 @@
         <img id='js-main-img-next' class='main_img2 fi' src="./img/main_next.jpg">
       </div> -->
     </header>
-    <div id='js-page-loader' class="page_loader">
+    <div id='js-page-loader' class="page_loader hidden">
       <center>
-        <img id='js-loader-img' style="opacity:0.7;" src="./img/loading-1.gif">
+        <img id='js-page-loader-img' style="opacity:0.7;" src="./img/loading-1.gif">
         <BR>
         Loading...
       </center>
@@ -50,39 +50,50 @@
             Your browser does not support the audio element.
           </audio>
   
-        <div id='js-greeting' class='greeting fi_short'>
-          <br>
-          <div id="js-cover-greeting">
-            <section id='js-name' class="font_m letter_wide inline_center no_margin">ANTHONY & MINJUNG</section>
+        <div id="js-cover-greeting" class="new_landing">
+          <div>
+            <section id='js-name2' class="font_m letter_wide inline_center no_margin">ANTHONY & MINJUNG</section>
             <center>
               <img id='js-wedding' class='wedding_logo fi' src="./img/wedding.png">
-            </center>
+            </center>            
+            <div id='js-msg' class='font_detail main_flex w300 fi_short' style="margin-top: -20px;margin-bottom: 10px;">
+              <BR>WE DECIDED ON FOREVER<BR>
+            </div>
+            <div id='js-date' class='font_detail main_flex w300 fi_short'>
+              APRIL &nbsp; | &nbsp; 20 &nbsp; | &nbsp; 2022<BR><BR><BR><BR>
+            </div>
+  
             <div id='js-btn-more' class="main_flex">
               <button type="submit" onclick="playMusic()" class="btn_black fi_short more_pic">
-                <i class="fa fa-film" style="font-size:24px;"></i><section class='btn_ft btn_scroll'>&nbsp; More Pics</section>
+                <i class="fa fa-film fa-spin" style="font-size:24px;"></i><section class='btn_ft'>&nbsp; Gallery</section>
               </button>
             </div> 
- 
+  
             <div id='js-warning' class='main_flex w300 red fi_short'>
               <BR>
               * Please beware of music<BR><BR><BR><BR>
-            </div>    
+            </div>      
           </div>
+        </div>
 
-          <div id="js-msg-bottom" class="hidden">
-            
+        <div id='js-greeting' class='greeting fi_short'>
+          <br>
+
+          <div id="js-msg-bottom" class="">
             <section id='js-name-next' class="wedding_name letter_wide inline_center no_margin">Anthony & Minjung</section><BR>
               <div class='main_flex fi_short'>
                 <img src="./img/leaf.png" class="leaf">
               </div>
-            <div id='js-msg' class='main_flex w300 fi_short'>
+
+  
+            <div id='js-msg' class='font_detail main_flex w300 fi_short'>
               <BR>WE DECIDED ON FOREVER<BR><BR>
             </div>
-            <div id='js-date' class='main_flex w300 fi_short'>
+            <div id='js-date' class='font_detail main_flex w300 fi_short'>
               APRIL &nbsp; | &nbsp; 20 &nbsp; | &nbsp; 2022<BR><BR>
             </div>
 
-            <div class='main_flex w300 fi_short'>
+            <div class='font_detail main_flex w300 fi_short'>
               PLEASE SCROLL THE SCREEN
             </div>
             <div id='js-date' class='main_flex w300 fi_short'>
@@ -97,7 +108,6 @@
           </center>
         </div>
 
-        <!-- <section class='font_m inline_center help' onClick="playMusic()">More Pictures</section> -->
         <div id='js-more-pic' class='more_pic'>
           <div class="bgcolor_white">
             <BR><BR>

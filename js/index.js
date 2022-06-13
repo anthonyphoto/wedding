@@ -8,6 +8,27 @@ let SLIDE_STOP = false;
 let SCROLL_HEIGHT = 0;
 let SCROLL_DETECT_DONE = false;
 
+
+const SONG_LIST = [
+  {
+    owner: 'Minjung & Anthony',
+    title: 'Kina Grannis - Can\'t Help Falling In Love',
+    path: './img/song-fallin.m4a',
+  }, 
+  {
+    owner: 'Anthony',
+    title: 'Si Tu Vois Ma Mère – Tatiana Eva-Marie & Avalon Jazz Band',
+    path: './img/situ.mp3'
+  }, 
+  {
+    owner: 'Minjung',
+    title: 'Madeleine Peyroux - Smile',
+    path: './img/madeleine.mp3',
+  }
+];
+let SONG_TRACK = 0;
+
+
 function morePicBanner() {
   $('#js-landing').replaceWith(`
     <div id='js-landing' class='more_intro'>
@@ -15,10 +36,21 @@ function morePicBanner() {
     </div>
   `);
 }
+function playNext() {
+  $('#js-music-info').css('display', 'none');
+  SONG_TRACK++;
+  if (SONG_TRACK === SONG_LIST.length) SONG_TRACK = 0;
+  $('audio').attr('src', SONG_LIST[SONG_TRACK].path);
+  window.document.querySelector('audio').play();
+  $('#js-owner').text(SONG_LIST[SONG_TRACK].owner);
+  $('#js-music-title').text(SONG_LIST[SONG_TRACK].title);    
+  $('#js-music-info').css('display', 'block');
+}
 
 function playMusic() {
   window.document.querySelector('audio').play();
-
+  $('#js-owner').text(SONG_LIST[SONG_TRACK].owner);
+  $('#js-music-title').text(SONG_LIST[SONG_TRACK].title);
   $('#js-cover-greeting').hide();
   $('.intro').css('display', 'none');
   $('#js-main-img').addClass('fi_short');  
@@ -51,6 +83,9 @@ function changeBackground() {
 function stopMusic() {
   window.document.querySelector('audio').pause();
   $('#js-btn-mute').hide();
+  $('#js-btn-mute-2').hide();
+  $('#js-owner').hide();
+  $('#js-music-info').hide();
   $('#js-btn-mute-2').hide();
 }
 
@@ -102,12 +137,8 @@ function renderMainImage() {
 }
 
 function handleEvent() {;
-  let songTrack = 0;
-  const songList = ['./img/song-fallin.m4a', './img/situ.mp3', './img/madeleine.mp3'];
-  songList.sort(() => Math.random() - 0.5);
-  if (songList[2] === './img/song-fallin.m4a') songList.sort(() => Math.random() - 0.5);
-
-  $('audio').attr('src', songList[songTrack++]);
+  SONG_LIST.sort(() => Math.random() - 0.5);  
+  $('audio').attr('src', SONG_LIST[SONG_TRACK].path);
 
   $('audio').on({
     // play: function() {
@@ -115,9 +146,12 @@ function handleEvent() {;
     // },
 
     ended: function() {
-      if (songTrack === songList.length) songTrack = 0;
-      $('audio').attr('src', songList[songTrack++]);
+      SONG_TRACK++;
+      if (SONG_TRACK === SONG_LIST.length) SONG_TRACK = 0;
+      $('audio').attr('src', SONG_LIST[SONG_TRACK].path);
       window.document.querySelector('audio').play();
+      $('#js-owner').text(SONG_LIST[SONG_TRACK].owner);
+      $('#js-music-title').text(SONG_LIST[SONG_TRACK].title);    
     }
   });
 

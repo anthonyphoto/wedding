@@ -17,6 +17,11 @@ const SONG_LIST = [
   }, 
   {
     owner: 'Anthony',
+    title: 'UP - Married Life',
+    path: './img/up.mp3',
+  }, 
+  {
+    owner: 'Anthony',
     title: 'Si Tu Vois Ma Mère – Tatiana Eva-Marie & Avalon Jazz Band',
     path: './img/situ.mp3'
   }, 

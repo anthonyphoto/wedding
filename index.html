@@ -44,11 +44,11 @@
           </span>
         </div>
 
-          <audio
+          <!-- <audio
             controls hidden
             src="./img/situ.mp3">
             Your browser does not support the audio element.
-          </audio>
+          </audio> -->
   
         <div id="js-cover-greeting" class="new_landing">
           <div>
@@ -164,7 +164,15 @@
                 </div>
             </center>
 
-          <div id='js-btn-mute-2' class="main_flex bgcolor_white">
+            <div id='js-btn-mute-2' class="main_flex bgcolor_white">
+              <audio
+                controls 
+                src="./img/situ.mp3">
+                Your browser does not support the audio element.
+            </audio>
+          </div>
+
+          <div id='js-btn-mute-2' class="main_flex bgcolor_white hidden">
             <button type="submit" onclick="stopMusic()" class="btn_black fi">
               <i class="fa fa-stop-circle-o" style="font-size:22px;"></i>
               <section style="line-height: 22px;">&nbsp Stop Music</section>

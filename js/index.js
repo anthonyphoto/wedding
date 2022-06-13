@@ -105,6 +105,7 @@ function handleEvent() {;
   let songTrack = 0;
   const songList = ['./img/song-fallin.m4a', './img/situ.mp3', './img/madeleine.mp3'];
   songList.sort(() => Math.random() - 0.5);
+  if (songList[2] === './img/song-fallin.m4a') songList.sort(() => Math.random() - 0.5);
 
   $('audio').attr('src', songList[songTrack++]);
 

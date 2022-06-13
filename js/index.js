@@ -21,7 +21,7 @@ const SONG_LIST = [
     path: './img/up.mp3',
   }, 
   {
-    owner: 'Anthony',
+    owner: 'Minjung',
     title: 'Si Tu Vois Ma Mère – Tatiana Eva-Marie & Avalon Jazz Band',
     path: './img/situ.mp3'
   }, 

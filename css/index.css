@@ -593,7 +593,8 @@ ul {
   border: 1px solid #2a2c2d;;
   color: #2a2c2d;
   background-color: transparent;
-  margin-top: 2rem;
+  margin-top: 12px;
+  margin-bottom: 48px;
 }
 
 .btn_black_s:hover,
